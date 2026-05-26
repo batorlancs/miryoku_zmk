@@ -1,0 +1,14 @@
+name: 'Build Totem on master'
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["xiao_ble//zmk"]'
+      shield: '["totem_left","totem_right"]'
+      alphas: '["qwerty"]'
