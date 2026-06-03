@@ -39,7 +39,7 @@ U_LT(U_MEDIA, LS(LC(LG(N4)))), U_NP,  U_LT(U_TMUX, ESC), U_LT(U_NAV, BSPC), U_LT
 #define MIRYOKU_LAYER_TMUX \
 U_BOOT,            &u_to_U_TAP,       &u_to_U_EXTRA,     &u_to_U_BASE,      U_NA,              &tmux_ctrl_a_shift_e,&tmux_ctrl_a_a,    &tmux_ctrl_a_e,    &tmux_ctrl_a_g,    &tmux_ctrl_a_shift_g,\
 &kp LGUI,          &kp LALT,          &kp LCTRL,         &kp LSHFT,         U_NA,              &u_caps_word,      &kp LC(LEFT),      &kp LC(DOWN),      &kp LC(UP),        &kp LC(RIGHT),     \
-U_NA,              &kp RALT,          &u_to_U_NUM,       &u_to_U_TMUX,      U_NA,              &kp INS,           &kp HOME,          &kp PG_DN,         &kp PG_UP,         &kp END,           \
+U_NA,              &kp RALT,          &u_to_U_NUM,       &u_to_U_TMUX,      U_NA,              &kp INS,           &tmux_ctrl_a_shift_t,&kp PG_DN,         &kp PG_UP,         &kp END,           \
 U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              &kp RET,           &kp BSPC,          &kp DEL,           U_NP,              U_NP
 
 #define MIRYOKU_LAYERMAPPING_TMUX MIRYOKU_MAPPING
@@ -74,6 +74,11 @@ U_NP,              U_NP,              U_NA,              U_NA,              U_NA
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings = <&kp LC(A) &kp LS(G)>;
+    };
+    tmux_ctrl_a_shift_t: tmux_ctrl_a_shift_t {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LC(A) &kp LS(T)>;
     };
   };
 };
