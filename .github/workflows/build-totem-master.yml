@@ -12,3 +12,4 @@ jobs:
       board: '["xiao_ble//zmk"]'
       shield: '["totem_left","totem_right"]'
       alphas: '["qwerty"]'
+      kconfig: '["CONFIG_ZMK_POINTING=y"]'
